@@ -1,0 +1,25 @@
+.singleservice{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid sandybrown;
+    margin-left: 10px;
+    /* height: 500px; */
+}
+
+.singleservice > p{
+    color: black;
+}
+
+.singleservice > button{
+    background-color: #be1615;
+    color: white;
+    font-weight: bolder;
+    height: 40px;
+    width: 150px;
+    border: none;
+    border-radius: 50px;
+}
+
