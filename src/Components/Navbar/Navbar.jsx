@@ -3,7 +3,10 @@ import "./Navbar.css";
 import { Icon } from '@chakra-ui/react'
 import { MdHome, MdShoppingCart, MdOutlineLocalGroceryStore,
   MdOutlineYoutubeSearchedFor, MdClear, MdViewList,MdSearch
-} from 'react-icons/md'
+} from 'react-icons/md';
+import { FaUserAlt } from "react-icons/fa";
+
+const CFaUserAlt = chakra(FaUserAlt);
 
 const cars = [
   {
@@ -531,10 +534,14 @@ const cars = [
         </div>
         
             <button className="nav-button uil uil-bars" id="navbar-cart-count" onClick={handlecart}><p className="cart">{cart}</p><Icon as={MdShoppingCart} w={8} h={8} mt={-6} color='white'/></button>
+            
+            <button className="nav-button uil uil-bars" id="navbar-cart-count"><CFaUserAlt color="#be1516" w={8} h={8} /></button>
+
+            {/* const CFaUserAlt = chakra(FaUserAlt); */}
         
          <div className="section-wrapper" >
           <div className={`hamburger ${isSection}`}>
-             <div className="section" style={{border:"1px solid red",  marginTop:"53px", textAlign: "left"}}>
+             <div className="section" style={{border:"1px solid red", marginTop:"53px", textAlign: "left"}}>
               <p>SignIn/Register</p>
               <hr />
               <p>Home</p>
@@ -550,7 +557,7 @@ const cars = [
             </div>
             <button 
               onClick={handleHamburger}
-              className="nav-button uil uil-bars">{isSection ? <Icon as={MdClear} w={8} h={8} color='white' /> : <Icon as={MdViewList} w={8} h={8} color='white' />}</button>
+              className="nav-button uil uil-bars">{isSection ? <Icon as={MdClear} w={8} h={8} color='white' /> : <Icon as={MdUser} w={8} h={8} color='white' />}</button>
                
           </div>
         </div>
